@@ -3,7 +3,7 @@ version: '3.3'
 services:
   db:
     image: mysql:8.0.15
-    container_name: wordpress_db
+    container_name: chakry1_db
     volumes:
       - db_data:/var/lib/mysql
     restart: always
@@ -15,7 +15,7 @@ services:
 
   wordpress:
     image: wordpress:latest
-    container_name: wordpress_app
+    container_name: chakry1_app
     depends_on:
       - db
     ports:
